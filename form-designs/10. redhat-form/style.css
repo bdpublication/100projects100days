@@ -1,0 +1,504 @@
+:root {
+  font-size: 1.25rem;
+  user-select: none;
+}
+
+:root {
+  font-family: "Red Hat Text", sans-serif;
+  --brand: #e00;
+  --bg: #fff;
+  --fg: #000811;
+  --mid: #999;
+  outline: none;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  background-color: var(--bg);
+  background-color: #fafafa;
+  color: var(--fg);
+  overscroll-behavior: none;
+  /* display: flex;*/
+  flex-direction: column;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #050505;
+    --fg: #ddd;
+    --mid: #555;
+  }
+
+  body {
+    background-color: #050505;
+  }
+
+  #band {
+    fill: transparent;
+  }
+
+  form:before {
+    opacity: 0.2 !important;
+  }
+}
+body::before,
+body::after {
+  content: "";
+  /*  flex: 1; */
+}
+
+form {
+  position: relative;
+  display: block;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.5rem 0.75rem -0.75rem rgba(0, 0, 0, 0.5);
+  width: 20rem;
+  margin: 0 auto;
+  min-height: 4rem;
+}
+
+form:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--mid);
+  opacity: 0.085;
+  z-index: 0;
+  border-radius: 0.4rem;
+}
+
+/* BEGIN GHETTO RESET */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  appearance: none;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Red Hat Text", sans-serif;
+  border: 0;
+  box-shadow: 0;
+  pointer-events: none;
+  text-rendering: optimizelegibility;
+}
+
+input {
+  appearance: none;
+  pointer-events: all;
+  color: currentcolor;
+  cursor: pointer;
+  box-shadow: none;
+  outline: 0 !important;
+}
+
+small {
+  color: var(--mid);
+  z-index: 1;
+}
+
+:valid + label,
+:focus + label {
+  z-index: 4;
+  transform-origin: 2.5rem 0;
+  animation: rise 0.45s ease-out forwards;
+  transform: scale(0.75) translate(0, -1rem);
+}
+
+@keyframes rise {
+  0% {
+    transform: scale(1) translate(0, -0.5rem);
+    color: currentcolor;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.75) translate(0, -1rem);
+  }
+}
+:valid + label {
+  color: var(--mid);
+}
+
+:focus + label {
+  color: var(--brand);
+}
+
+:focus {
+  outline: 0;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(238, 0, 0, 0.99);
+}
+
+::-moz-focus-inner {
+  border: 0;
+  outline: 0;
+}
+
+label {
+  font-weight: 400;
+  color: var(--mid);
+}
+
+input,
+label,
+svg,
+small {
+  width: 10rem;
+  height: 4rem;
+  line-height: 4.5rem;
+  position: absolute;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  text-indent: 0;
+  text-align: left;
+}
+
+/* END GHETTO RESET */
+[type=submit] {
+  background-color: var(--brand);
+  color: #fff;
+  border-radius: 0 0 0.4rem 0.4rem;
+  text-align: center;
+  background-image: linear-gradient(#f00, #c00);
+  line-height: 4rem;
+  width: 100%;
+  position: relative;
+  display: block;
+  transition: all 0.24s ease;
+  overflow: hidden;
+  position: absolute;
+  bottom: -4rem;
+}
+
+[type=submit]:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4rem;
+  top: 0;
+  left: 50%;
+  margin-left: -4rem;
+  transform: skew(-45deg) translate(-200%, 0);
+  background-color: #f00;
+  width: 8rem;
+  transition: all 0.5s ease;
+}
+
+[type=submit]:focus:after {
+  transform: skew(-45deg) translate(200%, 0);
+  opacity: 0;
+}
+
+/*hide submit button until fields have input*/
+:not(:valid) ~ [type=submit] {
+  opacity: 0;
+  transform: translate(0, 0.3rem);
+  z-index: 0;
+}
+
+:valid ~ :valid ~ [type=submit] {
+  height: 4rem;
+  margin-top: 4rem;
+  opacity: 1;
+  transform: translate(0, -0.1rem);
+  box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.3);
+  transition: all 0.5s cubic-bezier(0.3, 0.2, 0.2, 1);
+}
+
+[type=submit]:focus {
+  box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.note {
+  position: fixed;
+  bottom: 1em;
+  left: 0;
+  color: var(--mid);
+  width: 100%;
+  font-size: 0.5em;
+  z-index: -1;
+}
+
+small {
+  opacity: 0;
+  font-weight: 200;
+}
+
+:focus:not(:valid) + label + small {
+  opacity: 0.5;
+  transition: opacity 1s ease 1s;
+}
+
+label,
+small {
+  text-indent: 2.75rem;
+}
+
+[type=text],
+[type=password] {
+  text-indent: 2.75rem;
+  text-align: left;
+  background-color: transparent;
+  line-height: 4rem;
+  padding-top: 0.5rem;
+  top: 0;
+  /*
+  background-image: linear-gradient(145deg,  transparent, rgba(0,0,0,0.035) );*/
+}
+
+[type=text] {
+  border-radius: 0 0 0;
+}
+
+[type=text]:focus,
+[type=password]:focus {
+  /* box-shadow:  0 -.15rem var(--brand);*/
+  transition: box-shadow 0.4s ease;
+  background-image: none;
+  background-color: var(--bg);
+  box-shadow: 0 0.5rem 0.5rem -0.4rem rgba(0, 0, 0, 0.4);
+}
+
+[type=password],
+[type=password] + label,
+[type=password] + label + small {
+  right: 0;
+}
+
+[type=password] + label + small + svg {
+  left: 10.75rem;
+}
+
+/*
+Portrait mode for phones and sidebars 
+*/
+@media screen and (max-width: 440px) {
+  :root {
+    font-size: 1rem;
+  }
+
+  form {
+    min-height: 8rem;
+    width: 10rem;
+  }
+
+  [type=submit] {
+    margin-top: 4rem;
+    position: relative;
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  :valid ~ :valid ~ [type=submit] {
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  [type=text]:focus,
+[type=password]:focus {
+    box-shadow: 0 0.1em 0 var(--brand);
+    z-index: 3;
+  }
+
+  [type=password],
+[type=password] + label,
+[type=password] + label + small,
+[type=password] + label + small + svg {
+    top: 4rem;
+  }
+
+  [viewbox="0 0 10 10"] {
+    left: 0.25rem;
+  }
+
+  [type=password] + label + small + svg {
+    left: 0.25rem;
+    top: 5.5rem;
+  }
+}
+@media (min-width: 300px) and (orientation: landscape) {
+  .hbox {
+    display: block !important;
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    fill: none;
+    stroke-width: 1;
+    stroke: var(--mid);
+    stroke-dasharray: 0 468;
+    stroke-dashoffset: -96;
+    transition: all 0.5s ease;
+  }
+
+  [type=text]:focus ~ .hbox,
+[type=password]:focus ~ .hbox {
+    stroke-dasharray: 138 334;
+    stroke-dashoffset: 42;
+    stroke: var(--brand);
+  }
+
+  [type=submit]:focus ~ .hbox {
+    stroke-dashoffset: -300;
+  }
+
+  [type=password]:focus ~ .hbox {
+    stroke-dashoffset: -96;
+  }
+
+  /*field outline*/
+}
+small + svg {
+  stroke: var(--mid);
+  color: var(--mid);
+}
+
+input:focus + label + small + svg,
+input:focus + label + small + svg use {
+  stroke: var(--brand);
+  color: var(--brand);
+}
+
+.fedora {
+  fill: currentcolor !important;
+}
+
+/* icons*/
+#burst {
+  stroke: var(--mid);
+}
+
+#fed,
+#user,
+#lock,
+#pad,
+#burst,
+[viewbox="0 0 10 10"] use {
+  fill: transparent;
+  stroke-width: 1px;
+}
+
+#fed {
+  fill: currentcolor !important;
+}
+
+input + label + small + svg {
+  text-align: left;
+  z-index: 3;
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.5rem;
+  top: 1.5rem;
+}
+
+.fedora {
+  transform: translate(0, -1.5px);
+  opacity: 0;
+}
+
+.lock {
+  transform: translate(0, 0px);
+}
+
+[type=password]:valid ~ svg .lock {
+  transition: transform 0.5s ease;
+  transform: translate(0, 1.25px);
+}
+
+input[type=text]:valid ~ svg .fedora {
+  transform: translate(0, -0.7px);
+  transition: opacity 0.2s ease, transform 0.35s ease;
+  opacity: 1;
+}
+
+svg use {
+  fill: none;
+}
+
+#fed {
+  fill: auto !important;
+}
+
+.logo {
+  width: 100%;
+  position: relative;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+#brim {
+  fill: var(--brand);
+}
+
+#type {
+  fill: currentcolor;
+}
+
+.flash {
+  stroke-dasharray: 1 5;
+  stroke-dashoffset: -4;
+  stroke-linecap: round;
+  opacity: 0;
+}
+
+:focus + label + small + svg .flash {
+  stroke-dashoffset: 1;
+  transition: all 0.6s ease-out;
+  opacity: 1;
+  stroke-linecap: round;
+}
+
+[type=text] {
+  user-select: all;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+/*helper objects */
+.hbox {
+  display: none;
+}
+
+@media (max-height: 300px) and (orientation: landscape) {
+  body {
+    overflow-y: auto;
+  }
+
+  .hbox {
+    display: none;
+  }
+
+  form .note,
+form .logo {
+    display: none;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  transition: background-color 50000s ease-in-out 50000s;
+  font-family: "Red Hat Text", sans-serif !important;
+  box-shadow: inset 0 0 0 10rem var(--bg);
+  z-index: 3;
+}
+
+input:-webkit-autofill:hover + label + small {
+  display: none !important;
+}

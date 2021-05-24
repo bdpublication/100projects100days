@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #49176d;
+}
+
+.social {
+  margin: 10% 30%;
+}
+
+svg {
+  display: inline-block;
+  height: 80%;
+  max-height: 100%;
+  width: auto;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 15;
+  stroke-miterlimit: 5;
+}
+
+linearGradient {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.tw {
+  stroke-dasharray: 4000;
+}
+
+.st {
+  stroke-dasharray: 4000, 500, 0;
+}
+
+.fa {
+  stroke-dasharray: 3000;
+}
+
+.co {
+  stroke-dasharray: 4000;
+}
+
+.px {
+  stroke-dasharray: 6000;
+}
+
+svg:hover .tw {
+  -webkit-animation: tw 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient1 0.8s 5s forwards;
+  animation: tw 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient1 0.8s 1s forwards;
+}
+
+svg:hover .st {
+  -webkit-animation: st 1s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient2 0.8s 1s forwards;
+  animation: st 1s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient2 0.8s 1s forwards;
+}
+
+svg:hover .fa {
+  -webkit-animation: fa 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient3 0.8s 1s forwards;
+  animation: fa 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient3 0.8s 1s forwards;
+}
+
+svg:hover .co {
+  -webkit-animation: co 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient4 0.8s 1s forwards;
+  animation: co 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient4 0.8s 1s forwards;
+}
+
+svg:hover .px {
+  -webkit-animation: px 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient5 0.8s 1s forwards;
+  animation: px 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) forwards, gradient5 0.8s 1s forwards;
+}
+
+.gradient1 {
+  fill: url(#gradient1);
+}
+
+/*------- Stroke animation -------------*/
+@keyframes tw {
+  from {
+    stroke-dashoffset: 4000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes st {
+  from {
+    stroke-dashoffset: 4000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fa {
+  from {
+    stroke-dashoffset: 3000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes co {
+  from {
+    stroke-dashoffset: 4000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes px {
+  from {
+    stroke-dashoffset: 6000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/*--------- gradient animation ----*/
+@keyframes gradient1 {
+  10% {
+    fill: none;
+  }
+  100% {
+    fill: url(#gradient1);
+    stroke-width: 0;
+  }
+}
+@keyframes gradient2 {
+  10% {
+    fill: none;
+  }
+  100% {
+    fill: url(#gradient2);
+    stroke-width: 0;
+  }
+}
+@keyframes gradient3 {
+  10% {
+    fill: none;
+  }
+  100% {
+    fill: url(#gradient3);
+    stroke-width: 0;
+  }
+}
+@keyframes gradient4 {
+  10% {
+    fill: none;
+  }
+  100% {
+    fill: url(#gradient4);
+    stroke-width: 0;
+  }
+}
+@keyframes gradient5 {
+  10% {
+    fill: none;
+  }
+  100% {
+    fill: url(#gradient5);
+    stroke-width: 0;
+  }
+}

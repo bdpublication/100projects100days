@@ -1,0 +1,100 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.menu-container {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  transition-delay: 0.3s;
+}
+
+.menu {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background-color: #1c7cd6;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+#hamburger {
+  display: none;
+}
+
+label {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: pointer;
+  tap-highlight-color: transparent;
+}
+label:before {
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  width: 1em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white;
+  transform: scale(2);
+}
+
+#hamburger:checked ~ .menu-container {
+  width: 30vw;
+  height: 100vh;
+  transition-delay: 0s;
+}
+
+#hamburger:checked ~ .menu-container .menu {
+  width: 250vh;
+  height: 250vh;
+  transition: all 0.3s;
+}
+
+.menu-container .links {
+  position: absolute;
+  left: 15vw;
+  top: 50vh;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.menu-container .links a {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  margin: 3rem;
+}
+
+.content {
+  padding: 3rem 10rem;
+  transition: all 0.2s;
+  transition-delay: 0.1s;
+}
+.content h1 {
+  font-size: 2rem;
+  color: #212529;
+}
+.content h1:not(.header) {
+  margin-top: 4rem;
+}
+.content p {
+  margin-top: 2rem;
+  color: #495057;
+}
+
+#hamburger:checked ~ .content {
+  padding-left: 35vw;
+  transition: all 0.2s;
+  transition-delay: 0s;
+}

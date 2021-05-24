@@ -1,0 +1,83 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --line-offset: calc((10vh + 8px) / 2);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  background: #021919;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+}
+
+.tab {
+  width: calc(10vh + 8px);
+  height: calc(10vh + 8px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  z-index: 0;
+  transition: width 0.5s;
+}
+
+.tab img {
+  width: 10vh;
+  height: 10vh;
+  z-index: 10;
+  cursor: pointer;
+  clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  transition: width 0.5s;
+}
+
+[type=radio] {
+  display: none;
+}
+
+.preview-list {
+  background: linear-gradient(#021919, #021919 var(--line-offset), #efefef var(--line-offset));
+}
+
+.tab {
+  background: linear-gradient(#efefef, #efefef var(--line-offset), #021919 var(--line-offset));
+}
+
+[type=radio]:checked ~ label ~ .content {
+  text-align: center;
+  z-index: 8;
+}
+
+[type=radio]:checked ~ label .tab {
+  width: 0;
+}
+
+.content {
+  position: absolute;
+  background: #021919;
+  top: 1vh;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.content img {
+  height: auto;
+  width: 100vw;
+}

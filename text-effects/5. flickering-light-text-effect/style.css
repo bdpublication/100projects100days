@@ -1,0 +1,76 @@
+html,
+body {
+  background: linear-gradient(45deg, #2d2d2d 9%, black 100%);
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "CoreCircus", sans-serif;
+  font-size: 14vw;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: #2d2d2d;
+  letter-spacing: -0.5rem;
+}
+h1:before {
+  content: attr(data-heading);
+  position: absolute;
+  overflow: hidden;
+  color: #ffcc00;
+  width: 100%;
+  z-index: 5;
+  text-shadow: none;
+  left: 27%;
+  text-align: left;
+  -webkit-animation: flicker 3s linear infinite;
+          animation: flicker 3s linear infinite;
+}
+
+@-webkit-keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+/*
+ * Webfont: CoreCircus by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-circus/regular/
+ * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved.
+ * Licensed pageviews: 10,000
+*
+ * Webfont: CoreCircus2DDot1 by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-circus/dot1/
+ * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved.
+ * Licensed pageviews: 10,000
+*/
+@font-face {
+  font-family: "CoreCircus2DDot1";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff2") format("woff2"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CoreCircus";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2") format("woff2"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf") format("truetype");
+}

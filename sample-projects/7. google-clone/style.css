@@ -1,0 +1,64 @@
+
+.lines {
+    padding-Left: 10px;
+    font-size: 20px;
+}
+
+#other {
+    display: none;
+}
+
+#text1 {
+    color: royalblue;
+    font-family: arial;
+    padding-Left: 14px;
+    font-size: 16px;
+}
+
+#text2 {
+    font-family: arial;
+    padding-Left: 14px;
+    font-size: 16px;
+}
+
+.avatar {
+    float: right;
+    border-radius: 100px;
+}
+
+a {
+    line-height: 2;
+    padding: 20px;
+    color:royalblue;
+    font-size:13px;
+}
+
+.bottom {
+    font-family: arial;
+    text-align: center;
+}
+
+.imgs {
+    text-align: center;
+}
+
+input {
+    margin: 4px;
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #999;
+    width: 60%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.material-icons {
+    padding: 8px;
+    color: white;
+    font-size:30px;
+    border-radius: 100px;
+    background: royalblue;
+}

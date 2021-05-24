@@ -1,0 +1,98 @@
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+footer {
+	padding: 60px 0;
+	background-color: #21282e;
+	color: #fff;
+}
+footer a {
+	color: #fff;
+}
+.f-about {
+	padding-top: 15px;
+	float: left;
+}
+.f-about p {	
+	margin: 5px 0 5px;
+}
+.f-about .col-md-7 p {
+	margin: 0;
+}
+footer a:hover {
+	color: #f89901;
+}
+footer hr {
+	width: 60px;
+	float: left;
+	border-bottom: 2px solid #f89901;
+	margin: 10px 0;
+}
+.f-about, .f-about-img {
+	width: 100%;
+}
+.f-about ul li {
+	display: block;
+	margin: 6px 0;
+}
+.f-about ul li:first-child {
+	margin: 0;
+}
+.f-about-img ul {
+	margin-top: 25px;
+}
+.f-about-img ul li {
+	display: inline-block;
+	width: 30%;
+	margin: -3px 0 0;
+	overflow: hidden;
+}
+.f-about-img ul li img {
+	width: 100%;
+	transition: all 500ms;
+	-moz-transition: all 500ms;
+	-webkit-transition: all 500ms;
+}
+.f-about-img ul li img:hover {
+	transform: scale(1.3);
+	transition: all 500ms;
+	-moz-transition: all 500ms;
+	-webkit-transition: all 500ms;
+}
+/*=-Copyright-=*/
+.copyright {
+	background-color: #273037;
+	padding: 15px 0;
+	color: #fff;
+	font-size: 12px;
+}
+.copyright ul {
+	float: right;
+}
+.copyright ul li {
+	display: inline-block;
+}
+.copyright ul li a {
+	color: #fff;
+}
+.copyright ul li a:hover {
+	color: #f89901;
+}
+ @media (min-width: 320px) and (max-width: 575px) {
+.f-about {
+	margin-bottom: 25px;
+}
+.copyright {
+	text-align: center;
+}
+.copyright ul {
+	width: 100%;
+	margin-top: 10px;
+}
+}
+ @media (min-width: 576px) and (max-width: 767px) {
+.f-about {
+	margin-bottom: 25px;
+}
+}

@@ -1,0 +1,278 @@
+body {
+  background: #f4f6f3;
+  font-family: "Ibarra Real Nova", sans-serif;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #767A7F;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.nav {
+  background: #fff;
+  display: block;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 95%;
+  position: relative;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  box-shadow: -2px 4px 12px #ededed;
+  background: #292F36;
+  max-width: 1400px;
+}
+.nav a {
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  display: inline-block;
+}
+.nav__logo {
+  color: #B1B3B5;
+  font-size: 1.8rem;
+  align-self: center;
+  padding: 0.5rem 1.2rem 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav__logo span {
+  display: inline-block;
+  transform: translateY(0);
+}
+.nav__logo:hover span {
+  animation: 0.4s bounce ease-in-out;
+}
+.nav__logo:hover span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.nav__logo:hover span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.nav__logo:hover span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.nav__logo:hover span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.nav__logo:hover:before {
+  transform: translateY(0);
+  transition: 0.3s ease 0.5s;
+}
+.nav__logo:before {
+  content: "So You Work Remotely. Home office furniture and decoration items you can show off on Instagram.";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1.2rem;
+  background: #fff;
+  font-size: 1.1rem;
+  width: calc(100% - 2.4rem);
+  transform: translateY(-100%);
+  z-index: -1;
+  color: #292F36;
+}
+.nav__elements {
+  display: flex;
+}
+.nav__cart {
+  display: inline-block;
+  font: 700 1.1rem Oswald;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  color: #f9f9f9;
+  padding: 1.2rem;
+  align-self: center;
+}
+.nav__groups {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.nav__group {
+  z-index: 2;
+}
+.nav__group > a {
+  display: block;
+  font: 700 1.1rem Oswald;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.nav__group:first-child > a {
+  padding-left: 6rem;
+}
+.nav__group:last-child > a {
+  padding-right: 6rem;
+}
+.nav__group__dropdown {
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+  min-width: 450px;
+  left: 0;
+  padding: 1.5rem 2.5rem 2.5rem;
+  background: #fff;
+  transition: opacity 1.3s ease-in-out 0.3s, visibility 1s ease-out;
+  text-align: left;
+  width: 100%;
+}
+
+.product-list {
+  flex: 1;
+  min-width: 15rem;
+  padding-right: 1rem;
+}
+.product-list a {
+  padding: 0.5rem 0;
+  transition: 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+.product-list a:before {
+  content: "";
+  left: 0;
+  top: 85%;
+  width: 0;
+  transition: width 0.3s ease;
+  height: 3px;
+  position: absolute;
+  background: #292F36;
+}
+.product-list a:hover {
+  color: #292F36;
+}
+.product-list a:hover:before {
+  width: 30px;
+}
+.product-list__link {
+  padding-right: 0.5rem;
+}
+.product-list__title {
+  width: 100%;
+}
+.product-list.multi {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-list.multi .product-list__link {
+  flex: 1 1 50%;
+}
+
+.title {
+  margin: 1.2rem 0 0.8rem;
+  text-transform: uppercase;
+  font: 700 1.1rem Oswald;
+  letter-spacing: 0.02rem;
+}
+
+.multi-column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.article-list {
+  width: 100%;
+  padding-right: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.3rem;
+}
+.article-list__title {
+  width: 100%;
+}
+.article-list__link {
+  flex: 1;
+  min-width: 11rem;
+  margin-right: 2rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.article-list__link:before {
+  content: "";
+  width: 3.5px;
+  height: 0;
+  background: #292F36;
+  transition: height 0.3s ease;
+  position: absolute;
+  top: 0.8rem;
+  left: -0.9rem;
+}
+.article-list__link:hover {
+  transform: translateX(10px);
+}
+.article-list__link:hover a {
+  color: #292F36;
+}
+.article-list__link:hover:before {
+  height: 30px;
+}
+.article-list a {
+  padding: 0.4rem 0;
+}
+
+.nav__group a:hover + .nav__group__dropdown,
+.nav__group .nav__group__dropdown:hover,
+.nav__group li:hover > .nav__group__dropdown {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-image {
+  position: absolute;
+  max-width: 33%;
+  height: 250px;
+  object-fit: contain;
+  object-position: bottom right;
+  bottom: 0;
+  right: 0;
+  transition: 1.3s ease;
+  opacity: 0;
+  z-index: 1;
+}
+.product-image[data-match=table], .product-image[data-match=floor], .product-image[data-match=plant] {
+  opacity: 1;
+}
+
+.product-list[data-type=chair]:hover ~ .product-image[data-match=chair] {
+  opacity: 1;
+}
+.product-list[data-type=support]:hover ~ .product-image[data-match=support] {
+  opacity: 1;
+}
+.product-list[data-type=chair]:hover ~ .product-image[data-match=chair] {
+  opacity: 1;
+}
+.product-list[data-type=wall]:hover ~ .product-image[data-match=wall] {
+  opacity: 1;
+}
+.product-list[data-type=window]:hover ~ .product-image[data-match=window] {
+  opacity: 1;
+}
+.product-list[data-type=cool]:hover ~ .product-image[data-match=cool] {
+  opacity: 1;
+}
+.product-list[data-type=buddy]:hover ~ .product-image[data-match=buddy] {
+  opacity: 1;
+}
+.product-list[data-type=items]:hover ~ .product-image[data-match=items] {
+  opacity: 1;
+}
+.product-list[data-type=pets]:hover ~ .product-image[data-match=pets] {
+  opacity: 1;
+}

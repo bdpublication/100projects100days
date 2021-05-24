@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>collection-of-text-shadow-and-pattern-effects</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <h1>A collection of CSS Text shadow and pattern effects
+  <h2 class="headingOuter">Push down (shadow effect)</h2>
+  <div class="headingWrapper color-bright">
+    <a href="" class="header header--pushDown header--shadow" title="HOVER ME">HOVER ME</a>
+  </div>
+  <div class="headingWrapper">
+    <a href="" class="header header--pushDown header--shadow" title="HOVER ME">HOVER ME</a>
+  </div>
+
+  <h2 class="headingOuter">Raise up (shadow effect)</h2>
+  <div class="headingWrapper color-bright">
+    <a href="" class="header header--raiseUp header--shadow">HOVER ME</a>
+  </div>
+  <div class="headingWrapper">
+    <a href="" class="header header--raiseUp header--shadow">HOVER ME</a>
+  </div>
+
+  <h2 class="headingOuter">Push down (merging into page)</h2>
+  <div class="headingWrapper color-bright">
+    <a href="" class="header header--pushDown">HOVER ME</a>
+  </div>
+  <div class="headingWrapper">
+    <a href="" class="header header--pushDown">HOVER ME</a>
+  </div>
+
+
+  <h2 class="headingOuter">Raise up (emerging from page)</h2>
+  <div class="headingWrapper color-bright">
+    <a href="" class="header header--raiseUp">HOVER ME</a>
+  </div>
+  <div class="headingWrapper">
+    <a href="" class="header header--raiseUp">HOVER ME</a>
+  </div>
+
+  <h2 class="headingOuter">Raised up (emerging from bg) with pattern</h2>
+  <div class="headingWrapper color-bright">
+    <a href="#" class="header header--raiseUp header--svg">
+      <svg>
+        <defs>
+          <linearGradient id="stripedColor" x1="0" x2="0" y1="0%" y2="4%" spreadMethod="repeat">
+            <stop offset="0%" stop-color="#e62915" />
+            <stop offset="50%" stop-color="#e62915" />
+            <stop offset="51%" stop-color="#fff" />
+            <stop offset="99%" stop-color="#fff" />
+            <stop offset="100%" stop-color="#e62915" />
+          </linearGradient>
+        </defs>
+        <text y="1.2em">Hover Me</text>
+      </svg>
+    </a>
+  </div>
+  <div class="headingWrapper">
+    <a href="#" class="header header--raiseUp header--svg">
+      <svg>
+        <defs>
+          <linearGradient id="striped" x1="0" x2="0" y1="0%" y2="4%" spreadMethod="repeat">
+            <stop offset="0%" stop-color="#e62915" />
+            <stop offset="50%" stop-color="#e62915" />
+            <stop offset="51%" stop-color="#fff" />
+            <stop offset="99%" stop-color="#fff" />
+            <stop offset="100%" stop-color="#e62915" />
+          </linearGradient>
+        </defs>
+        <text y="1.2em">Hover Me</text>
+      </svg>
+    </a>
+  </div>
+
+
+</body>
+
+</html>

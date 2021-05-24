@@ -1,0 +1,157 @@
+/*
+	The following mixin is taken and edited from this pen - https://codepen.io/hugo/pen/xzjGB
+	I have added outlineColor to allow the addition of a text-shadow outline for the text.
+ */
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+h1, h2, h3 {
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.4em;
+  background-color: #292929;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  color: #fff;
+}
+h1 a {
+  display: block;
+  margin-top: 10px;
+  text-transform: none;
+  color: #aaa;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+h3 {
+  margin: 0;
+  padding: 10px;
+}
+
+.headingOuter {
+  background: #f1f1f1;
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.headingOuter:first-child {
+  margin-top: 0;
+}
+h1 + .headingOuter {
+  margin-top: 10px;
+}
+
+.headingWrapper {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.header {
+  display: inline-block;
+  text-align: center;
+  font-family: "Francois One", Helvetica, Arial, sans-serif;
+  font-size: 96px;
+  color: #e7e7e7;
+  text-decoration: none;
+  text-shadow: 1.5px 1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px 1.5px 0 #cac6c5, 1.5px -1.5px 0 #cac6c5;
+  transition: all 400ms ease-in-out;
+}
+
+.header--pushDown {
+  text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.7778174593px 0.7778174593px 0 #aaaaaa, 1.5556349186px 1.5556349186px 0 #aaaaaa, 2.3334523779px 2.3334523779px 0 #aaaaaa, 3.1112698372px 3.1112698372px 0 #aaaaaa, 3.8890872965px 3.8890872965px 0 #aaaaaa, 4.6669047558px 4.6669047558px 0 #aaaaaa, 5.4447222151px 5.4447222151px 0 #aaaaaa, 6.2225396744px 6.2225396744px 0 #aaaaaa, 7.0003571337px 7.0003571337px 0 #aaaaaa, 7.7781745931px 7.7781745931px 0 #aaaaaa;
+}
+.header--pushDown:hover {
+  transform: translate(9px, 9px);
+  text-shadow: 1.5px 1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px 1.5px 0 #cac6c5, 1.5px -1.5px 0 #cac6c5;
+}
+
+.header--raiseUp:hover {
+  transform: translate(-9px, -9px);
+  text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.7778174593px 0.7778174593px 0 #aaaaaa, 1.5556349186px 1.5556349186px 0 #aaaaaa, 2.3334523779px 2.3334523779px 0 #aaaaaa, 3.1112698372px 3.1112698372px 0 #aaaaaa, 3.8890872965px 3.8890872965px 0 #aaaaaa, 4.6669047558px 4.6669047558px 0 #aaaaaa, 5.4447222151px 5.4447222151px 0 #aaaaaa, 6.2225396744px 6.2225396744px 0 #aaaaaa, 7.0003571337px 7.0003571337px 0 #aaaaaa, 7.7781745931px 7.7781745931px 0 #aaaaaa;
+}
+
+.header--shadow:hover {
+  transform: translate(5px, 0);
+}
+.header--shadow.header--raiseUp:hover {
+  transform: translate(-5px, 0);
+}
+
+.color-bright {
+  background-color: #ebaca5;
+}
+.color-bright .header {
+  color: #f89bb4;
+  text-shadow: 1.5px 1.5px 0 #d38076, -1.5px -1.5px 0 #d38076, -1.5px -1.5px 0 #d38076, -1.5px 1.5px 0 #d38076, 1.5px -1.5px 0 #d38076;
+}
+.color-bright .header--pushDown {
+  text-shadow: 1.5px 1.5px 0 #fff, 0px 1.5px 0 #fff, -1.5px -1.5px 0 #fff, -1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px -1.5px 0 #fff, 0.7778174593px 0.7778174593px 0 #e62915, 1.5556349186px 1.5556349186px 0 #e62915, 2.3334523779px 2.3334523779px 0 #e62915, 3.1112698372px 3.1112698372px 0 #e62915, 3.8890872965px 3.8890872965px 0 #e62915, 4.6669047558px 4.6669047558px 0 #e62915, 5.4447222151px 5.4447222151px 0 #e62915, 6.2225396744px 6.2225396744px 0 #e62915, 7.0003571337px 7.0003571337px 0 #e62915, 7.7781745931px 7.7781745931px 0 #e62915;
+}
+.color-bright .header--pushDown:hover {
+  text-shadow: 1.5px 1.5px 0 #d38076, -1.5px -1.5px 0 #d38076, -1.5px -1.5px 0 #d38076, -1.5px 1.5px 0 #d38076, 1.5px -1.5px 0 #d38076;
+}
+.color-bright .header--raiseUp:hover {
+  text-shadow: 1.5px 1.5px 0 #fff, 0px 1.5px 0 #fff, -1.5px -1.5px 0 #fff, -1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px -1.5px 0 #fff, 0.7778174593px 0.7778174593px 0 #e62915, 1.5556349186px 1.5556349186px 0 #e62915, 2.3334523779px 2.3334523779px 0 #e62915, 3.1112698372px 3.1112698372px 0 #e62915, 3.8890872965px 3.8890872965px 0 #e62915, 4.6669047558px 4.6669047558px 0 #e62915, 5.4447222151px 5.4447222151px 0 #e62915, 6.2225396744px 6.2225396744px 0 #e62915, 7.0003571337px 7.0003571337px 0 #e62915, 7.7781745931px 7.7781745931px 0 #e62915;
+}
+
+svg {
+  line-height: 1.2;
+  width: 410px;
+  height: 1.5em;
+}
+
+.header--svg text,
+.header--svg stop {
+  transition: all 350ms ease-in-out;
+}
+.header--svg text {
+  text-transform: uppercase;
+  fill: url(#striped);
+  text-shadow: 1.5px 1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px 1.5px 0 #cac6c5, 1.5px -1.5px 0 #cac6c5;
+}
+.header--svg:hover text {
+  text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.7778174593px 0.7778174593px 0 #aaaaaa, 1.5556349186px 1.5556349186px 0 #aaaaaa, 2.3334523779px 2.3334523779px 0 #aaaaaa, 3.1112698372px 3.1112698372px 0 #aaaaaa, 3.8890872965px 3.8890872965px 0 #aaaaaa, 4.6669047558px 4.6669047558px 0 #aaaaaa, 5.4447222151px 5.4447222151px 0 #aaaaaa, 6.2225396744px 6.2225396744px 0 #aaaaaa, 7.0003571337px 7.0003571337px 0 #aaaaaa, 7.7781745931px 7.7781745931px 0 #aaaaaa;
+}
+.header--svg stop {
+  stop-color: #e7e7e7;
+}
+.header--svg:hover stop {
+  stop-color: #fff;
+}
+.header--svg:hover stop:nth-child(2), .header--svg:hover stop:nth-child(3) {
+  stop-color: #d38076;
+}
+
+.color-bright .header--svg text {
+  fill: url(#stripedColor);
+  text-shadow: 1.5px 1.5px 0 #d38076, -1.5px -1.5px 0 #d38076, -1.5px -1.5px 0 #d38076, -1.5px 1.5px 0 #d38076, 1.5px -1.5px 0 #d38076;
+}
+.color-bright .header--svg:hover text {
+  text-shadow: 1.5px 1.5px 0 #fff, 0px 1.5px 0 #fff, -1.5px -1.5px 0 #fff, -1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px -1.5px 0 #fff, 0.7778174593px 0.7778174593px 0 #e62915, 1.5556349186px 1.5556349186px 0 #e62915, 2.3334523779px 2.3334523779px 0 #e62915, 3.1112698372px 3.1112698372px 0 #e62915, 3.8890872965px 3.8890872965px 0 #e62915, 4.6669047558px 4.6669047558px 0 #e62915, 5.4447222151px 5.4447222151px 0 #e62915, 6.2225396744px 6.2225396744px 0 #e62915, 7.0003571337px 7.0003571337px 0 #e62915, 7.7781745931px 7.7781745931px 0 #e62915;
+}
+.color-bright stop {
+  stop-color: #f89bb4;
+}
+.color-bright .header--svg:hover stop:nth-child(2), .color-bright .header--svg:hover stop:nth-child(3) {
+  stop-color: #ed5751;
+}

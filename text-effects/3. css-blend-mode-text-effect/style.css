@@ -1,0 +1,45 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #fbe6d3;
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-size: 20vw;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-weight: 900;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+.wrapper h1 {
+  color: #fbe6d3;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  text-shadow: -1px -1px 0 #3e2e6a, 1px -1px 0 #3e2e6a, -1px 1px 0 #3e2e6a, 1px 1px 0 #3e2e6a;
+}
+.wrapper h1:after {
+  content: attr(data-heading);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  overflow: hidden;
+  color: #f3576c;
+  transform: translate(0.4vw, 0.3vh);
+  mix-blend-mode: darken;
+  text-align: center;
+  width: 100%;
+  text-shadow: 1px 0px 0px #3e2e6a, 0px 1px 0px #130b52, 2px 1px 0px #3e2e6a, 1px 2px 0px #130b52, 3px 2px 0px #3e2e6a, 2px 3px 0px #130b52, 4px 3px 0px #3e2e6a, 3px 4px 0px #130b52, 5px 4px 0px #3e2e6a, 4px 5px 0px #130b52, 6px 5px 0px #3e2e6a, 5px 6px 0px #130b52, 7px 6px 0px #3e2e6a;
+}
