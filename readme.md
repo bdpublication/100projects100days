@@ -10,16 +10,16 @@ BOOK LINK 👇
 
 |  #  | Project                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 01  | [Loading Animation](https://github.com/bdpublication/100projects100days/tree/main/1-loading-animations)                             | [Live Demo](http://bdpublication/1-loading-animations/)               |
-| 02  | [Button Effects](https://github.com/bdpublication/100projects100days/tree/main/2-button-effects)                               | [Live Demo](http://bdpublication/2-button-effects/)                |
-| 03  | [Text Effects](https://github.com/bdpublication/100projects100days/tree/main/3-text-effects/)                       | [Live Demo](http://bdpublication/3-text-effects/) |
-| 04  | [Social Media Icons](https://github.com/bdpublication/100projects100days/tree/main/4-social-media-icons)                          | [Live Demo](http://bdpublication/4-social-media-icons/)          |
-| 05  | [Card Designs](https://github.com/bdpublication/100projects100days/tree/main/5-card-designs)                               | [Live Demo](http://bdpublication/5-card-designs/)                |
-| 06  | [Form Designs](https://github.com/bdpublication/100projects100days/tree/main/6-form-designs)                           | [Live Demo](http://bdpublication/6-form-designs/)              |
-| 07  | [Gallery Designs](https://github.com/bdpublication/100projects100days/tree/main/7-gallery-designs)                       | [Live Demo](http://bdpublication/7-gallery-designs/)            |
-| 08  | [Header Designs](https://github.com/bdpublication/100projects100days/tree/main/8-header-designs)                                         | [Live Demo](http://bdpublication/8-header-designs/)                     |
-| 09  | [Footer Designs](https://github.com/bdpublication/100projects100days/tree/main/9-footer-designs)                                     | [Live Demo](http://bdpublication/9-footer-designs/)                   |
-| 10  | [Sample Projects](https://github.com/bdpublication/100projects100days/tree/main/10-sample-projects)                                         | [Live Demo](http://bdpublication/10-sample-projects/)                     |
+| 01  | [Loading Animation](https://github.com/bdpublication/100projects100days/tree/main/1-loading-animations)                             | [Live Demo](http://bdpublication.ml/1-loading-animations/)               |
+| 02  | [Button Effects](https://github.com/bdpublication/100projects100days/tree/main/2-button-effects)                               | [Live Demo](http://bdpublication.ml/2-button-effects/)                |
+| 03  | [Text Effects](https://github.com/bdpublication/100projects100days/tree/main/3-text-effects/)                       | [Live Demo](http://bdpublication.ml/3-text-effects/) |
+| 04  | [Social Media Icons](https://github.com/bdpublication/100projects100days/tree/main/4-social-media-icons)                          | [Live Demo](http://bdpublication.ml/4-social-media-icons/)          |
+| 05  | [Card Designs](https://github.com/bdpublication/100projects100days/tree/main/5-card-designs)                               | [Live Demo](http://bdpublication.ml/5-card-designs/)                |
+| 06  | [Form Designs](https://github.com/bdpublication/100projects100days/tree/main/6-form-designs)                           | [Live Demo](http://bdpublication.ml/6-form-designs/)              |
+| 07  | [Gallery Designs](https://github.com/bdpublication/100projects100days/tree/main/7-gallery-designs)                       | [Live Demo](http://bdpublication.ml/7-gallery-designs/)            |
+| 08  | [Header Designs](https://github.com/bdpublication/100projects100days/tree/main/8-header-designs)                                         | [Live Demo](http://bdpublication.ml/8-header-designs/)                     |
+| 09  | [Footer Designs](https://github.com/bdpublication/100projects100days/tree/main/9-footer-designs)                                     | [Live Demo](http://bdpublication.ml/9-footer-designs/)                   |
+| 10  | [Sample Projects](https://github.com/bdpublication/100projects100days/tree/main/10-sample-projects)                                         | [Live Demo](http://bdpublication.ml/10-sample-projects/)                     |
 
 <br>
 
