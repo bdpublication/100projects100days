@@ -4,8 +4,8 @@ This is the main repository for all of the projects in the book.
 
 BOOK LINK 👇
 
--   [Buy Link (for indian user)](https://)
--   [Buy Link (for international user)](https://)
+-   [Buy Link (for indian user)](https://imojo.in/MasterHTMLandCSS)
+-   [Buy Link (for international user)](https://gumroad.com/l/MasterHTMLandCSS)
 
 
 |  #  | Project                                                                                                                     | Live Demo                                                                         |
